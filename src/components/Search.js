@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 
 class Search extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      word: "hello"
+    }
+  }
+
   render() {
     return (
       <section className="section">
@@ -11,6 +18,7 @@ class Search extends Component {
               id="define-input"
               placeholder="Enter a word"
               type="text"
+              value={this.state.word}
             />
           </div>
           <div className="control">
