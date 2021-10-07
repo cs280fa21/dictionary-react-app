@@ -4,13 +4,26 @@ class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      word: "hello"
-    }
+      word: "hello",
+    };
   }
 
   changeWord = (event) => {
-    this.setState({word: event.target.value});
-  }
+    this.setState({ word: event.target.value });
+  };
+
+  fetchDefinitions = async (event) => {
+    event.preventDefault();
+    const dictionaryAPI = "https://api.dictionaryapi.dev/api/v2/entries/en_US/";
+    const wordToDefine = this.state.word;
+    try {
+      const response = await fetch(`${dictionaryAPI}${wordToDefine}`);
+      const data = await response.json();
+      console.log(data[0]);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   render() {
     return (
@@ -27,7 +40,11 @@ class Search extends Component {
             />
           </div>
           <div className="control">
-            <button className="button is-info is-large" id="define-btn">
+            <button
+              className="button is-info is-large"
+              id="define-btn"
+              onClick={this.fetchDefinitions}
+            >
               Define
             </button>
           </div>

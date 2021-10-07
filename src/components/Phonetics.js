@@ -17,7 +17,7 @@ function Phonetics() {
       {
         phonetics.map((phonetic, index) => {
           return (
-            <article className="message is-medium">
+            <article className="message is-medium" key={index}>
               <div className="message-header">
                 {phonetic.text}
               </div>
