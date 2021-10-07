@@ -8,6 +8,10 @@ class Search extends Component {
     }
   }
 
+  changeWord = (event) => {
+    this.setState({word: event.target.value});
+  }
+
   render() {
     return (
       <section className="section">
@@ -19,6 +23,7 @@ class Search extends Component {
               placeholder="Enter a word"
               type="text"
               value={this.state.word}
+              onChange={this.changeWord}
             />
           </div>
           <div className="control">
