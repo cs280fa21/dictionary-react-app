@@ -1,43 +1,5 @@
-function Definitions() {
-  const meanings = [
-    {
-      partOfSpeech: "exclamation",
-      definitions: [
-        {
-          definition: "Used as a greeting or to begin a phone conversation.",
-          example: "hello there, Katie!",
-        },
-      ],
-    },
-    {
-      partOfSpeech: "noun",
-      definitions: [
-        {
-          definition: "An utterance of “hello”; a greeting.",
-          example: "she was getting polite nods and hellos from people",
-          synonyms: [
-            "greeting",
-            "welcome",
-            "salutation",
-            "saluting",
-            "hailing",
-            "address",
-            "hello",
-            "hallo",
-          ],
-        },
-      ],
-    },
-    {
-      partOfSpeech: "intransitive verb",
-      definitions: [
-        {
-          definition: "Say or shout “hello”; greet someone.",
-          example: "I pressed the phone button and helloed",
-        },
-      ],
-    },
-  ];
+function Definitions(props) {
+  const { meanings } = props;
 
   return (
     <section className="section is-medium pt-0 pb-6" id="definitions">

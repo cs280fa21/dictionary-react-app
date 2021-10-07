@@ -67,8 +67,8 @@ class App extends Component {
       <>
         <Header />
         <Search />
-        <Phonetics />
-        <Definitions />
+        <Phonetics phonetics={this.state.phonetics} />
+        <Definitions meanings={this.state.meanings} />
         <Footer />
       </>
     );
