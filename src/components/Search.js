@@ -1,19 +1,27 @@
-function Search() {
+import React, { Component } from "react";
 
-  return (
-    <section className="section">
-      <div className="field has-addons">
-        <div className="control is-expanded">
-          <input className="input is-large is-fullwidth" id="define-input" placeholder="Enter a word" type="text"/>
+class Search extends Component {
+  render() {
+    return (
+      <section className="section">
+        <div className="field has-addons">
+          <div className="control is-expanded">
+            <input
+              className="input is-large is-fullwidth"
+              id="define-input"
+              placeholder="Enter a word"
+              type="text"
+            />
+          </div>
+          <div className="control">
+            <button className="button is-info is-large" id="define-btn">
+              Define
+            </button>
+          </div>
         </div>
-        <div className="control">
-          <button className="button is-info is-large" id="define-btn">
-            Define
-          </button>
-        </div>
-      </div>
-    </section>
-  );
+      </section>
+    );
+  }
 }
 
 export default Search;
