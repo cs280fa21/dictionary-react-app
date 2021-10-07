@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 class Search extends Component {
   constructor(props) {
@@ -17,8 +18,8 @@ class Search extends Component {
     const dictionaryAPI = "https://api.dictionaryapi.dev/api/v2/entries/en_US/";
     const wordToDefine = this.state.word;
     try {
-      const response = await fetch(`${dictionaryAPI}${wordToDefine}`);
-      const data = await response.json();
+      const response = await axios.get(`${dictionaryAPI}${wordToDefine}`);
+      const data = response.data;
       console.log(data[0]);
     } catch (err) {
       console.log(err);
