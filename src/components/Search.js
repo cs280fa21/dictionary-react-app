@@ -1,5 +1,19 @@
 function Search() {
-  return <div>Search!</div>;
+
+  return (
+    <section className="section">
+      <div className="field has-addons">
+        <div className="control is-expanded">
+          <input className="input is-large is-fullwidth" id="define-input" placeholder="Enter a word" type="text"/>
+        </div>
+        <div className="control">
+          <button className="button is-info is-large" id="define-btn">
+            Define
+          </button>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Search;
