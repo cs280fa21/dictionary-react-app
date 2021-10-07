@@ -62,11 +62,15 @@ class App extends Component {
     };
   }
 
+  updateDefinitionsAndPhonetics = (data) => {
+    this.setState({ ...data });
+  };
+
   render() {
     return (
       <>
         <Header />
-        <Search />
+        <Search updateUI={this.updateDefinitionsAndPhonetics} />
         <Phonetics phonetics={this.state.phonetics} />
         <Definitions meanings={this.state.meanings} />
         <Footer />

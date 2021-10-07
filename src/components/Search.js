@@ -21,6 +21,7 @@ class Search extends Component {
       const response = await axios.get(`${dictionaryAPI}${wordToDefine}`);
       const data = response.data;
       console.log(data[0]);
+      this.props.updateUI(data[0]);
     } catch (err) {
       console.log(err);
     }
